@@ -21,15 +21,13 @@ struct StoryView: View {
                     .font(.body)
                     .padding()
             }
-            ForEach(story[pageIndex].choices, id: \Choice.text) { choice in
-                NavigationLink(destination: StoryPageView(story: story, pageIndex: choice.destination)) {
-                    Text(choice.text)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                        .background(Color.gray.opacity(0.25))
-                        .cornerRadius(8)
-                }
+            NavigationLink(destination: StoryPageView(story: story, pageIndex: pageIndex)) {
+                Text("Click here to begin")
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .background(Color.gray.opacity(0.25))
+                    .cornerRadius(8)
             }
         }
         .padding([.top, .bottom], 50)

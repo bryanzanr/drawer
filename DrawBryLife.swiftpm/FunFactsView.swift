@@ -9,7 +9,7 @@ struct FunFactsView: View {
     @State private var funFact = ""
     var body: some View {
         VStack {
-            Text("Fun Facts")
+            Text("Initial Information")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                         

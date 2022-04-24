@@ -43,6 +43,6 @@ let information = Info(
         "Beside its generic topic, some of the sentences may also quite complex and hard to understand due to the incorrect grammar.",
         "As the result, I didn't expect to much as well with this project although it was finally way more better than the previous 2 submission.",
         "I hope my very short stories can give different perspective so that we can all be an open minded person who respect each other.",
-        "Last but not least, all of these sentences were just some initial disclaimer or even an introudction to the application itself",
+        "Last but not least, all of these sentences were just some initial disclaimer or even an introduction to the application itself",
     ]
 )

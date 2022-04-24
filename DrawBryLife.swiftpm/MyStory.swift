@@ -207,7 +207,7 @@ let story = Story(pages: [
         Welcome to My Kind of Draw My Life Story
         🥖🍪Get Ready!🥐🍰
         
-        I'm just an ordinary people who like to express about my opinion 🎪. although most of the time I have never got an opportunity to shared it to the public.
+        I'm just an ordinary people who like to express about my opinion 🎪 although most of the time I have never got an opportunity to shared it to the public.
         
         Basically it's all caused by my laziness but there's also some lack of motivation from the surrounding. Sometimes the only thing that I can do is just be patient since there're still so many things that I can grateful of. What do you want me to tell next?
         """,

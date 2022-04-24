@@ -1,3 +1,14 @@
+//: # WWDC 2022! Draw My Life App on SwiftUI.
+//: - AboutMe: Tab View application.
+//: - ChooseYourOwnStory: Navigation View application.
+
+//
+//This application is about my feeling and dreams about something
+//which I want to express on
+//developed by Bryanza Novirahman
+//@version 24-04-202w
+//
+
 /*
 See the License.txt file for this sample’s licensing information.
 */
@@ -11,11 +22,13 @@ struct ContentView: View {
                 .tabItem {
                     Label("Home", systemImage: "person")
                 }
-
-            StoryView(story: story, pageIndex: 0)
-                .tabItem {
-                    Label("Story", systemImage: "book")
-                }
+            
+            NavigationView {
+                StoryView(story: story, pageIndex: 0)
+            }.navigationViewStyle(.stack)
+            .tabItem {
+                Label("Story", systemImage: "book")
+            }
             
             FavoritesView()
                 .tabItem {
@@ -24,7 +37,7 @@ struct ContentView: View {
             
             FunFactsView()
                 .tabItem {
-                    Label("Fun Facts", systemImage: "hand.thumbsup")
+                    Label("Disclaimer", systemImage: "hand.thumbsup")
                 }
         }
         
