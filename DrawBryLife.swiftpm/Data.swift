@@ -8,10 +8,12 @@ import SwiftUI
 struct Info {
     let image: String
     let name: String
+    let story_template: String
     let story: String
     let hobbies: [String]
     let foods: [String]
     let colors: [Color]
+    let funFacts_template : [String]
     let funFacts: [String]
 }
 
@@ -35,7 +37,7 @@ let information = Info(
     ],
     funFacts: [
         "To be honest, I didn't know what exactly that I want to write every time I was in the front of screen to do it.",
-        "However, it's been a while since I always think about something that I want to express in through various kind of way."
+        "However, it's been a while since I always think about something that I want to express in through various kind of way.",
         "The story may seem irrelevant or unnecessary as most of the things that I tried to explain were as general as possible.",
         "I'm also not sure whether I can create a really unique application's experience with these kind of story.",
         "Beside its generic topic, some of the sentences may also quite complex and hard to understand due to the incorrect grammar.",
