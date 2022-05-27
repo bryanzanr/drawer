@@ -16,7 +16,7 @@ let package = Package(
         .iOSApplication(
             name: "DrawBryLife",
             targets: ["AppModule"],
-            bundleIdentifier: "com.herokuapp.DrawBryLife",
+            bundleIdentifier: "com.herokuapp.drawbrylife",
             teamIdentifier: "7863FB5B6W",
             displayVersion: "1.0",
             bundleVersion: "1",
