@@ -9,7 +9,15 @@ struct EventList: View {
     @State private var isAddingNewEvent = false
     @State private var newEvent = Event()
     
+    @State private var isEditing = false
+    
     var body: some View {
+        
+        if isEditing {
+            NavigationView {
+                FunFactsView()
+            }
+        }
         
         List {
             ForEach(Period.allCases) { period in
@@ -40,7 +48,13 @@ struct EventList: View {
         }
         .navigationTitle("Date Planner")
         .toolbar {
-            ToolbarItem {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(isEditing ? "Done" : "Edit") {
+                    withAnimation { isEditing.toggle() }
+                }
+            }
+            
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     newEvent = Event()
                     isAddingNewEvent = true

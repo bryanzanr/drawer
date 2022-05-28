@@ -16,6 +16,9 @@ See the License.txt file for this sample’s licensing information.
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var dataModel = DataModel()
+    
     var body: some View {
         TabView {
             HomeView()
@@ -38,10 +41,14 @@ struct ContentView: View {
                 Label("Favorites", systemImage: "star")
             }
             
-            FunFactsView()
-                .tabItem {
-                    Label("Disclaimer", systemImage: "hand.thumbsup")
-                }
+            NavigationView {
+                ImageGalleryView()
+            }
+            .environmentObject(dataModel)
+            .navigationViewStyle(.stack)
+            .tabItem {
+                Label("Disclaimer", systemImage: "hand.thumbsup")
+            }
         }
         
     }
