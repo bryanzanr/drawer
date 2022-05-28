@@ -18,7 +18,7 @@ let package = Package(
             targets: ["AppModule"],
             bundleIdentifier: "com.herokuapp.drawbrylife",
             teamIdentifier: "7863FB5B6W",
-            displayVersion: "1.0",
+            displayVersion: "1.1",
             bundleVersion: "1",
             iconAssetName: "AppIcon",
             accentColorAssetName: "AccentColor",
