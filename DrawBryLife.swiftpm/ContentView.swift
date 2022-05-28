@@ -30,10 +30,13 @@ struct ContentView: View {
                 Label("Story", systemImage: "book")
             }
             
-            FavoritesView()
-                .tabItem {
-                    Label("Favorites", systemImage: "star")
-                }
+            NavigationView {
+                FavoritesView()
+            }
+            .navigationViewStyle(.stack)
+            .tabItem {
+                Label("Favorites", systemImage: "star")
+            }
             
             FunFactsView()
                 .tabItem {
