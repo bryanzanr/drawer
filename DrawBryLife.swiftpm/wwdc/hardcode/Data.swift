@@ -10,14 +10,14 @@ struct Info {
     let name: String
     let story_template: String
     let story: String
-    let hobbies: [String]
+    var hobbies: [String]
     let foods: [String]
     let colors: [Color]
     let funFacts_template : [String]
     let funFacts: [String]
 }
 
-let information = Info(
+var information = Info(
     image: "Placeholder",
     name: "Bry",
     story_template: "A story can be about anything you can dream up. There are no right answers, there is no one else.\n\nNeed some inspiration?\n• 🐶🐱🛶️🎭🎤🎧🎸\n• 🏄‍♀️🚵‍♀️🚴‍♀️⛵️🥾🏂⛷📚\n• ✍️🥖☕️🏋️‍♂️🚲🧗‍♀️ ",
