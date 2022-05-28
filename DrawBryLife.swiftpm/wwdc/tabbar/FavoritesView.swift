@@ -30,11 +30,6 @@ struct FavoritesView: View {
             }
             
             ScrollView {
-                Text("Favorites")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 40)
-                
                 Text("Hobbies")
                     .font(.title2)
                 
@@ -88,15 +83,19 @@ struct FavoritesView: View {
 
                 HStack(spacing: 30) {
                     ForEach(information.colors, id: \.self) { color in
-                        color
-                            .frame(width: 70, height: 70)
-                            .cornerRadius(10)
+                        NavigationLink(destination: ItemDetail(symbolName: color.description)) {
+                            ZStack(alignment: .topTrailing) {
+                                color
+                                    .frame(width: 70, height: 70)
+                                    .cornerRadius(10)
+                            }
+                        }
                     }
                 }
                 .padding()
             }
         }
-        .navigationBarTitle("My Symbols")
+        .navigationBarTitle("Favorites")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isAddingSymbol, onDismiss: addSymbol) {
             FavoritesPicker(name: $selectedSymbolName)

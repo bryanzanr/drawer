@@ -22,7 +22,7 @@ var information = Info(
     name: "Bry",
     story_template: "A story can be about anything you can dream up. There are no right answers, there is no one else.\n\nNeed some inspiration?\n• 🐶🐱🛶️🎭🎤🎧🎸\n• 🏄‍♀️🚵‍♀️🚴‍♀️⛵️🥾🏂⛷📚\n• ✍️🥖☕️🏋️‍♂️🚲🧗‍♀️ ",
     story: "Ok, so this's actually my first time trying to write a story from an application that already have a template before which I think is quite inspirational",
-    hobbies: ["bicycle", "ticket.fill", "book.fill"],
+    hobbies: ["bicycle", "ticket", "book"],
     foods: ["🥐", "🌮", "🍣"],
     colors: [Color.blue, Color.purple, Color.pink],
     funFacts_template: [
