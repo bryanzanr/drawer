@@ -12,18 +12,12 @@ struct ItemDetail: View {
             Text(symbolName)
                 .font(.system(.largeTitle, design: .rounded))
             
-            Image(systemName: symbolName)
+            Image(symbolName)
                 .resizable()
                 .scaledToFit()
                 .symbolRenderingMode(.hierarchical)
                 .foregroundColor(.accentColor)
         }
         .padding()
-    }
-}
-
-struct Details_Previews: PreviewProvider {
-    static var previews: some View {
-        ItemDetail(symbolName: "magnifyingglass")
     }
 }

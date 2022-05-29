@@ -15,18 +15,7 @@ struct FavoritesView: View {
     @State private var gridColumns = Array(repeating: GridItem(.flexible()), count: initialColumns)
     
     @State private var symbolNames = [
-        "tshirt",
-        "eyes",
-        "eyebrow",
-        "nose",
-        "mustache",
-        "mouth",
-        "eyeglasses",
-        "facemask",
-        "brain.head.profile",
-        "brain",
-        "icloud",
-        "theatermasks.fill",
+        "store",
     ]
     
     var columnsText: String {
@@ -47,7 +36,7 @@ struct FavoritesView: View {
                     ForEach(symbolNames, id: \.self) { name in
                         NavigationLink(destination: ItemDetail(symbolName: name)) {
                             ZStack(alignment: .topTrailing) {
-                                Image(systemName: name)
+                                Image(name)
                                     .resizable()
                                     .scaledToFit()
                                     .symbolRenderingMode(.hierarchical)
@@ -77,7 +66,7 @@ struct FavoritesView: View {
                 }
             }
         }
-        .navigationBarTitle("My Symbols")
+        .navigationBarTitle("My Apps")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isAddingSymbol, onDismiss: addSymbol) {
             FavoritesPicker(name: $selectedSymbolName)
