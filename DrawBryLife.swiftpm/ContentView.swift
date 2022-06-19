@@ -16,34 +16,52 @@ See the License.txt file for this sample’s licensing information.
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isActive:Bool = false
+    @StateObject private var myNotes = NotesModel()
+    
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("Home", systemImage: "person")
+        VStack {
+            if self.isActive {
+                TabView {
+                    HomeView()
+                        .tabItem {
+                            Label("Home", systemImage: "person")
+                        }
+                    
+                    NavigationView {
+                        StoryView(story: story, pageIndex: 0)
+                    }.navigationViewStyle(.stack)
+                    .tabItem {
+                        Label("Story", systemImage: "book")
+                    }
+                    
+                    NavigationView {
+                        FavoritesView()
+                    }
+                    .navigationViewStyle(.stack)
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                    
+                    NotesView(myNotes: myNotes)
+                        .tabItem {
+                            Label("Disclaimer", systemImage: "hand.thumbsup")
+                        }
                 }
-            
-            NavigationView {
-                StoryView(story: story, pageIndex: 0)
-            }.navigationViewStyle(.stack)
-            .tabItem {
-                Label("Story", systemImage: "book")
+            } else {
+                Text("Draw Bry Life!")
+                   .font(Font.largeTitle)
             }
-            
-            NavigationView {
-                FavoritesView()
-            }
-            .navigationViewStyle(.stack)
-            .tabItem {
-                Label("Favorites", systemImage: "star")
-            }
-            
-            FunFactsView()
-                .tabItem {
-                    Label("Disclaimer", systemImage: "hand.thumbsup")
-                }
         }
-        
+        .preferredColorScheme(.dark)
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                withAnimation {
+                    self.isActive = true
+                }
+            }
+        }
     }
 }
 
